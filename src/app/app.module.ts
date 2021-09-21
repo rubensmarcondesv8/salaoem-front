@@ -17,6 +17,9 @@ import {MatTableModule} from '@angular/material/table';
 import { HomeComponent } from './components/views/home/home.component';
 import { CatservicoReadComponent } from './components/views/catservico/catservico-read/catservico-read.component';
 import {MatButtonModule} from '@angular/material/button';
+import { CatprodutoReadComponent } from './components/views/catproduto/catproduto-read/catproduto-read.component';
+import { CatprofissionalReadComponent } from './components/views/catprofissional/catprofissional-read/catprofissional-read.component';
+import { ClientesReadComponent } from './components/views/clientes/clientes-read/clientes-read.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import {MatButtonModule} from '@angular/material/button';
     FooterComponent,
     NavComponent,
     HomeComponent,
-    CatservicoReadComponent
+    CatservicoReadComponent,
+    CatprodutoReadComponent,
+    CatprofissionalReadComponent,
+    ClientesReadComponent
   ],
   imports: [
     BrowserModule,

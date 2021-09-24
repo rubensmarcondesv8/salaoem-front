@@ -20,6 +20,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { CatprodutoReadComponent } from './components/views/catproduto/catproduto-read/catproduto-read.component';
 import { CatprofissionalReadComponent } from './components/views/catprofissional/catprofissional-read/catprofissional-read.component';
 import { ClientesReadComponent } from './components/views/clientes/clientes-read/clientes-read.component';
+import { CatlancamentoReadComponent } from './components/views/catlancamento/catlancamento-read/catlancamento-read.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ClientesReadComponent } from './components/views/clientes/clientes-read
     CatservicoReadComponent,
     CatprodutoReadComponent,
     CatprofissionalReadComponent,
-    ClientesReadComponent
+    ClientesReadComponent,
+    CatlancamentoReadComponent
   ],
   imports: [
     BrowserModule,

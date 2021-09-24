@@ -1,24 +1,24 @@
 <div class="content">
     <div class="title">
         <h1>
-            Profissionais
+            Lançamentos
         </h1>
     </div>
-    <button mat-raised-button color="primary">Novo Profissional</button>
+    <button mat-raised-button color="primary">Novo Lançamento</button>
     <div class="mat-elevation-z8 content-table">
-        <table class="tabela" mat-table [dataSource] = "catprofissionallista">
-            <ng-container matColumnDef="nomeCatProfissional">
-              <th mat-header-cell *matHeaderCellDef> Nome </th>
-              <td mat-cell *matCellDef="let row"> {{ row.nomeCatProfissional }} </td>
+        <table class="tabela" mat-table [dataSource] = "catlancamentolista">
+            <ng-container matColumnDef="tipoLancamento">
+              <th mat-header-cell *matHeaderCellDef> Débito/Crédito </th>
+              <td mat-cell *matCellDef="let row"> {{ row.tipoLancamento }} </td>
             </ng-container>
 
-            <ng-container matColumnDef="descCatProfissional">
+            <ng-container matColumnDef="descrLancamento">
               <th mat-header-cell *matHeaderCellDef> Descrição </th>
-              <td mat-cell *matCellDef="let row"> {{ row.descCatProfissional }} </td>
+              <td mat-cell *matCellDef="let row"> {{ row.descrLancamento }} </td>
             </ng-container>
 
-            <ng-container matColumnDef="Profissionais">
-                <th mat-header-cell *matHeaderCellDef> Profissionais </th>
+            <ng-container matColumnDef="Lançamentos">
+                <th mat-header-cell *matHeaderCellDef> Lançamentos </th>
                 <td mat-cell *matCellDef="let row">
                     <a href="#">
                         <i class="material-icons servicos">sports</i>
@@ -45,3 +45,4 @@
     </div>
       
 </div>
+

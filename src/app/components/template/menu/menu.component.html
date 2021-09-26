@@ -1,0 +1,69 @@
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="">
+            <i class="material-icons">home</i>
+            Início
+    </button>
+    <button mat-menu-item>
+            <i class="material-icons">event</i>
+            Agenda
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="financeiro">
+        <i class="material-icons">event</i>
+        Financeiro
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="manutencao">
+        <i class="material-icons">event</i>
+        Manutenção
+    </button>
+</mat-menu>
+
+<mat-menu #manutencao="matMenu">
+    <button mat-menu-item routerLink="clientes">
+            <i class="material-icons">diamond</i>
+            Cadastro de Clientes
+    </button>
+    <button mat-menu-item routerLink="catservico">
+            <i class="material-icons">content_cut</i>
+            Serviços Habilitados
+    </button>
+    <button mat-menu-item routerLink="catproduto">
+            <i class="material-icons">local_grocery_store</i>
+            Cadastro de Produtos
+    </button>
+    <button mat-menu-item routerLink="catprofissional">
+            <i class="material-icons">badge</i>
+            Profissionais do Salão
+    </button>
+    <button mat-menu-item routerLink="catlancamento">
+            <i class="material-icons">request_quote</i>
+            Fornecedores em Geral
+    </button>
+    <button mat-menu-item routerLink="catlancamento">
+            <i class="material-icons">request_quote</i>
+            Pagamento/Recebimento
+    </button>
+</mat-menu>
+
+<mat-menu #financeiro="matMenu">
+    <button mat-menu-item>
+        <i class="material-icons">request_quote</i>
+        Conta-Corrente
+    </button>
+    <button mat-menu-item>
+        <i class="material-icons">request_quote</i>
+        Vendas
+    </button>
+    <button mat-menu-item>
+        <i class="material-icons">request_quote</i>
+        Estoque
+    </button>
+    <button mat-menu-item>
+        <i class="material-icons">request_quote</i>
+        Contas a Pagar
+    </button>
+    <button mat-menu-item>
+        <i class="material-icons">request_quote</i>
+        Contas a Receber
+    </button>
+</mat-menu>

@@ -1,19 +1,13 @@
 .container{
-    background-color: #777;
+    background-color: #cfb7a9;
     height: 75%;
 }
 
-i {
-    padding-right: 0.6rem;
+.side{
+    background-color: #cfb7a9;
+    width: 10%;
 }
 
-mat-nav-list{
-    background-color: #333;
-    color: white;
-    font-size: 1.5rem;
-    height: 99%;
-}
-
-a{
-    padding-bottom: 0.5rem;
+.mat-drawer-side {
+    border-right: 0;
 }

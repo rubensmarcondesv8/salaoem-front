@@ -1,22 +1,27 @@
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="">
-            <i class="material-icons">home</i>
-            Início
+<div>
+    <button mat-button routerLink="">
+        <i class="material-icons">home</i>
+        Início
     </button>
-    <button mat-menu-item>
-            <i class="material-icons">event</i>
-            Agenda
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="financeiro">
-        <i class="material-icons">event</i>
-        Financeiro
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="manutencao">
-        <i class="material-icons">event</i>
+</div>
+<div>
+    <button mat-button [matMenuTriggerFor]="manutencao">
+        <i class="material-icons">settings_applications</i>
         Manutenção
     </button>
-</mat-menu>
+</div>
+<div>
+    <button mat-button [matMenuTriggerFor]="financeiro">
+        <i class="material-icons">request_quote</i>
+        Financeiro
+    </button>
+</div>
+<div>
+    <button mat-button routerLink="">
+        <i class="material-icons">event</i>
+        Agenda
+    </button>
+</div>
 
 <mat-menu #manutencao="matMenu">
     <button mat-menu-item routerLink="clientes">

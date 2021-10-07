@@ -9,7 +9,7 @@ import { ClientesService } from '../clientes.service';
 })
 export class ClientesReadComponent implements OnInit {
   clienteslista: Cliente[] = [];
-  displayedColumns: string[] = ['nomeCliente', 'telefoneCliente', 'acoes'];
+  displayedColumns: string[] = ['nomeCliente', 'telefoneCliente', 'aniversarioCliente', 'acoes'];
   constructor(private service: ClientesService) { }
 
   ngOnInit(): void {

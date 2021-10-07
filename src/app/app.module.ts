@@ -15,13 +15,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { HomeComponent } from './components/views/home/home.component';
-import { CatservicoReadComponent } from './components/views/catservico/catservico-read/catservico-read.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
-import { CatprodutoReadComponent } from './components/views/catproduto/catproduto-read/catproduto-read.component';
-import { CatprofissionalReadComponent } from './components/views/catprofissional/catprofissional-read/catprofissional-read.component';
 import { ClientesReadComponent } from './components/views/clientes/clientes-read/clientes-read.component';
-import { CatlancamentoReadComponent } from './components/views/catlancamento/catlancamento-read/catlancamento-read.component';
 import { MenuComponent } from './components/template/menu/menu.component';
 
 @NgModule({
@@ -31,11 +27,7 @@ import { MenuComponent } from './components/template/menu/menu.component';
     FooterComponent,
     NavComponent,
     HomeComponent,
-    CatservicoReadComponent,
-    CatprodutoReadComponent,
-    CatprofissionalReadComponent,
     ClientesReadComponent,
-    CatlancamentoReadComponent,
     MenuComponent
   ],
   imports: [

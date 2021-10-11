@@ -1,0 +1,22 @@
+<form>
+    <h1>Adicionar Cliente</h1>
+
+    <mat-form-field class="adicionaCliente">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" name="nomeCliente" placeholder="nome completo">
+    </mat-form-field>
+    <mat-form-field class="adicionaCliente">
+        <mat-label>Telefone</mat-label>
+        <input matInput type="text" name="telefoneCliente" placeholder="tel com DDD">
+    </mat-form-field>
+    <mat-form-field class="adicionaCliente" appearance="fill">
+        <mat-label>Aniversário</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker ></mat-datepicker>
+    </mat-form-field>
+    <div class="buttons">
+        <button mat-raised-button color="primary">ADICIONAR</button>
+        <button mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>

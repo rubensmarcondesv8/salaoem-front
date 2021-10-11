@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cliente } from '../clientes.model';
 import { ClientesService } from '../clientes.service';
 
@@ -10,7 +11,7 @@ import { ClientesService } from '../clientes.service';
 export class ClientesReadComponent implements OnInit {
   clienteslista: Cliente[] = [];
   displayedColumns: string[] = ['nomeCliente', 'telefoneCliente', 'aniversarioCliente', 'acoes'];
-  constructor(private service: ClientesService) { }
+  constructor(private service: ClientesService, private router: Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -20,6 +21,10 @@ export class ClientesReadComponent implements OnInit {
     this.service.findAll().subscribe(resposta => {
       this.clienteslista = resposta;
     })
+  }
+
+  irParaClientesCreate(){
+    this.router.navigate(["clientes/create"]);
   }
 
 }

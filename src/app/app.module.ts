@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { ClientesReadComponent } from './components/views/clientes/clientes-read/clientes-read.component';
 import { MenuComponent } from './components/template/menu/menu.component';
+import { ClientesCreateComponent } from './components/views/clientes/clientes-create/clientes-create.component';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,8 @@ import { MenuComponent } from './components/template/menu/menu.component';
     NavComponent,
     HomeComponent,
     ClientesReadComponent,
-    MenuComponent
+    MenuComponent,
+    ClientesCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +50,16 @@ import { MenuComponent } from './components/template/menu/menu.component';
     MatTableModule,
     HttpClientModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  providers: [],
+  providers: [
+              {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}
+            ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

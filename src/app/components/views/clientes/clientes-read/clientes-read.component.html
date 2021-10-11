@@ -4,7 +4,7 @@
             Clientes
         </h1>
     </div>
-    <button mat-raised-button color="primary">Novo Cliente</button>
+    <button mat-raised-button (click)="irParaClientesCreate()" color="primary">Novo Cliente</button>
     <div class="mat-elevation-z8 content-table">
         <table class="tabela" mat-table [dataSource] = "clienteslista">
             <ng-container matColumnDef="nomeCliente">

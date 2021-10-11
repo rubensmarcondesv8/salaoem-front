@@ -3,7 +3,7 @@
 
     <mat-form-field class="adicionaCliente">
         <mat-label>Nome</mat-label>
-        <input matInput [(ngModel)] = "cliente.nomeCliente" type="text" name="nomeCliente" placeholder="nome completo">
+        <input matInput [(ngModel)] = "cliente.nomeCliente" type="text" name="nomeCliente" placeholder="nome completo" #input [value]="input.value.toUpperCase()">
     </mat-form-field>
     <mat-form-field class="adicionaCliente">
         <mat-label>Telefone</mat-label>

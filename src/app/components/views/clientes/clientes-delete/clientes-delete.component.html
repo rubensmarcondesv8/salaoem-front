@@ -1,0 +1,20 @@
+<form>
+    <h1>Excluir Cliente</h1>
+
+    <mat-form-field class="adicionaCliente">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)] = "cliente.nomeCliente" type="text" name="nomeCliente" disabled>
+    </mat-form-field>
+    <mat-form-field class="adicionaCliente">
+        <mat-label>Telefone</mat-label>
+        <input matInput [(ngModel)] = "cliente.telefoneCliente" type="text" name="telefoneCliente" disabled>
+    </mat-form-field>
+    <mat-form-field class="adicionaCliente">
+        <mat-label>Aniversário</mat-label>
+        <input matInput [(ngModel)] ="cliente.aniversarioCliente" type="text" name="aniversarioCliente" disabled>
+    </mat-form-field>
+    <div class="buttons">
+        <button (click) = "delete()" mat-raised-button color="primary">EXCLUIR</button>
+        <button (click) = "cancel()" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>

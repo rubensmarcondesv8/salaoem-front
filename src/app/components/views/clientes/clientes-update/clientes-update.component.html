@@ -1,0 +1,22 @@
+<form>
+    <h1>Alterar Cadastro do Cliente</h1>
+
+    <mat-form-field class="adicionaCliente">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)] = "cliente.nomeCliente" type="text" name="nomeCliente" placeholder="nome completo" #input [value]="input.value.toUpperCase()">
+    </mat-form-field>
+    <mat-form-field class="adicionaCliente">
+        <mat-label>Telefone</mat-label>
+        <input matInput [(ngModel)] = "cliente.telefoneCliente" type="text" name="telefoneCliente" placeholder="tel com DDD">
+    </mat-form-field>
+    <mat-form-field class="adicionaCliente" appearance="fill">
+        <mat-label>Aniversário</mat-label>
+        <input matInput [(ngModel)] ="cliente.aniversarioCliente" name = "aniversarioCliente" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker ></mat-datepicker>
+    </mat-form-field>
+    <div class="buttons">
+        <button (click) = "update()" mat-raised-button color="primary">SALVAR</button>
+        <button (click) = "cancel()" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>

@@ -27,6 +27,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ClientesDeleteComponent } from './components/views/clientes/clientes-delete/clientes-delete.component';
+import { ClientesUpdateComponent } from './components/views/clientes/clientes-update/clientes-update.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HomeComponent,
     ClientesReadComponent,
     MenuComponent,
-    ClientesCreateComponent
+    ClientesCreateComponent,
+    ClientesDeleteComponent,
+    ClientesUpdateComponent
   ],
   imports: [
     BrowserModule,

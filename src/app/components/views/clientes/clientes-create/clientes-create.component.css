@@ -13,3 +13,12 @@ h1{
     width: 100%;
 }
 
+.buttons{
+    text-align: start;
+}
+
+button{
+    margin-right: 0.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}

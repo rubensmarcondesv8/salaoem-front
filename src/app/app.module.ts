@@ -27,6 +27,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSelectModule} from '@angular/material/select';
 import { ClientesDeleteComponent } from './components/views/clientes/clientes-delete/clientes-delete.component';
 import { ClientesUpdateComponent } from './components/views/clientes/clientes-update/clientes-update.component';
 import { ProdutosReadComponent } from './components/views/produtos/produtos-read/produtos-read.component';
@@ -117,7 +118,8 @@ import { ItemvendaDeleteComponent } from './components/views/itemvenda/itemvenda
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSelectModule
   ],
   providers: [
               {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}

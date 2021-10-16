@@ -1,1 +1,38 @@
-<p>produtos-delete works!</p>
+<form>
+    <h1>Excluir Produto</h1>
+
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)] = "produto.nomeProduto" type="text" name="nomeProduto" disabled>
+    </mat-form-field>
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)] = "produto.descProduto" type="text" name="descProduto" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Preço Unitário</mat-label>
+        <input matInput [(ngModel)] = "produto.precoUnitario" type="text" name="precoUnitario" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Comissão do Vendedor</mat-label>
+        <input matInput [(ngModel)] = "produto.comissaoProduto" type="text" name="comissaoProduto" disabled>
+    </mat-form-field>
+    
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Quantidade em Estoque</mat-label>
+        <input matInput [(ngModel)] = "produto.quantidadeEstoque" type="text" name="quantidadeEstoque" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Categoria do Produto</mat-label>
+        <input matInput [(ngModel)] = "produto.categoriaProduto" type="text" name="categoriaProduto" disabled/>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click) = "delete()" mat-raised-button color="primary">APAGAR</button>
+        <button (click) = "cancel()" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>
+

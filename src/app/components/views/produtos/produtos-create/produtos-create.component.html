@@ -1,1 +1,33 @@
-<p>produtos-create works!</p>
+<form>
+    <h1>Adicionar Produto</h1>
+
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)] = "produto.nomeProduto" type="text" name="nomeProduto" placeholder="nome" #input [value]="input.value.toUpperCase()">
+    </mat-form-field>
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)] = "produto.descProduto" type="text" name="descProduto" placeholder="descrição" #input [value]="input.value.toUpperCase()">
+    </mat-form-field>
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Preço Unitário</mat-label>
+        <input matInput [(ngModel)] = "produto.precoUnitario" type="text" name="precoUnitario" placeholder="preço">
+    </mat-form-field>
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Comissão do Vendedor</mat-label>
+        <input matInput [(ngModel)] = "produto.comissaoProduto" type="text" name="comissaoProduto" placeholder="comissão">
+    </mat-form-field>
+    <mat-form-field class="adicionaProduto">
+        <mat-label>Categoria do Produto</mat-label>
+        <mat-select [(ngModel)]="produto.categoriaProduto" name="categoriaProduto">
+            <mat-option *ngFor="let cat of categoriaProduto" [value]="cat.value">
+              {{cat.viewValue}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+
+    <div class="buttons">
+        <button (click) = "create()" mat-raised-button color="primary">ADICIONAR</button>
+        <button (click) = "cancel()" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>

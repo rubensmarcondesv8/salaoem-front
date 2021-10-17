@@ -1,1 +1,33 @@
-<p>servicos-create works!</p>
+<form>
+    <h1>Adicionar Serviço</h1>
+
+    <mat-form-field class="adicionaServico">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)] = "servico.nomeServico" type="text" name="nomeServico" placeholder="nome" #input [value]="input.value.toUpperCase()">
+    </mat-form-field>
+    <mat-form-field class="adicionaServico">
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)] = "servico.descrServico" type="text" name="descrServico" placeholder="descrição" >
+    </mat-form-field>
+    <mat-form-field class="adicionaServico">
+        <mat-label>Preço</mat-label>
+        <input matInput [(ngModel)] = "servico.precoBaseServico" type="text" name="precoBaseServico" placeholder="preço">
+    </mat-form-field>
+    <mat-form-field class="adicionaServico">
+        <mat-label>Comissão do Salão</mat-label>
+        <input matInput [(ngModel)] = "servico.comissaoSalao" type="text" name="comissao" placeholder="comissão">
+    </mat-form-field>
+    <mat-form-field class="adicionaServico">
+        <mat-label>Categoria do Servico</mat-label>
+        <mat-select [(ngModel)]="servico.categoriaServico" name="categoriaServico">
+            <mat-option *ngFor="let cat of categoriaServico" [value]="cat.value">
+              {{cat.viewValue}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+
+    <div class="buttons">
+        <button (click) = "create()" mat-raised-button color="primary">ADICIONAR</button>
+        <button (click) = "cancel()" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>

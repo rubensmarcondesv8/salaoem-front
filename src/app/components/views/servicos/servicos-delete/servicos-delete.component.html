@@ -1,1 +1,34 @@
-<p>servicos-delete works!</p>
+<form>
+    <h1>Excluir Serviço</h1>
+
+    <mat-form-field class="adicionaServico">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)] = "servico.nomeServico" type="text" name="nomeServico" disabled>
+    </mat-form-field>
+    <mat-form-field class="adicionaServico">
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)] = "servico.descrServico" type="text" name="descrServico" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="adicionaServico">
+        <mat-label>Preço Unitário</mat-label>
+        <input matInput [(ngModel)] = "servico.precoBaseServico" type="text" name="precoBaseServico" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="adicionaServico">
+        <mat-label>Comissão</mat-label>
+        <input matInput [(ngModel)] = "servico.comissaoSalao" type="text" name="comissaoSalao" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="adicionaServico">
+        <mat-label>Categoria</mat-label>
+        <input matInput [(ngModel)] = "servico.categoriaServico" type="text" name="categoriaServico" disabled/>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click) = "delete()" mat-raised-button color="primary">APAGAR</button>
+        <button (click) = "cancel()" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>
+
+

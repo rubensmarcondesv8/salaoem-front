@@ -1,1 +1,38 @@
-<p>servicos-update works!</p>
+<form>
+    <h1>Alterar Cadastro do Servico</h1>
+
+    <mat-form-field class="adicionaServico">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)] = "servico.nomeServico" type="text" name="nomeServico" placeholder="nome">
+    </mat-form-field>
+    <mat-form-field class="adicionaServico">
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)] = "servico.descrServico" type="text" name="descrServico" placeholder="descricao">
+    </mat-form-field>
+
+    <mat-form-field class="adicionaServico">
+        <mat-label>Preço Unitário</mat-label>
+        <input matInput [(ngModel)] = "servico.precoBaseServico" type="text" name="precoBaseServico" placeholder="preço">
+    </mat-form-field>
+
+    <mat-form-field class="adicionaServico">
+        <mat-label>Comissão do Vendedor</mat-label>
+        <input matInput [(ngModel)] = "servico.comissaoSalao" type="text" name="comissaoSalao" placeholder="comissão">
+    </mat-form-field>
+
+    <mat-form-field class="adicionaServico">
+        <mat-label>Categoria do Servico</mat-label>
+        <mat-select [(ngModel)]="servico.categoriaServico" name="categoriaServico">
+            <mat-option *ngFor="let cat of categoriaServico" [value]="cat.value">
+              {{cat.viewValue}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+
+    <div class="buttons">
+        <button (click) = "update()" mat-raised-button color="primary">SALVAR</button>
+        <button (click) = "cancel()" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>
+
+
